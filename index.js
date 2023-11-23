@@ -14,22 +14,9 @@ class Book{
 
 class UI {
     static displayBooks(){
-        const StoredBooks = [
-            {
-                title : 'Book One',
-                author : 'John Doe',
-                isbn : '3434434'
-            },
-            {
-                title : 'Book Two',
-                author : 'John Doe',
-                isbn : '45545'
-            }
-        ];
+        const StoredBooks = [ ];
 
-        const books = StoredBooks;
-
-        books.forEach((book) => UI.addBookToList(book));
+        Storedbooks.forEach((book) => UI.addBookToList(book));
     }
 
     static addBookToList(book) {
@@ -105,7 +92,7 @@ document.querySelector('#book-form').addEventListener('submit',(e) => {
     UI.addBookToList(book);
 
     // Show success message
-    UI.showAlert('Book Added','SUCCESS')
+    UI.showAlert('Book Added','success')
 
     // Clear fields
     UI.clearFields();
@@ -119,5 +106,5 @@ document.querySelector('#book-form').addEventListener('submit',(e) => {
 document.querySelector('#book-list').addEventListener('click',(e) => {
     UI.deleteBook(e.target);
     // Show success message
-    UI.showAlert('Book Removed','SUCCESS')
+    UI.showAlert('Book Removed','success')
 });
